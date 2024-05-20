@@ -8,11 +8,11 @@ function showElementById(elementId){
 }
 function setBackgroundColorById(elementId){
     const element = document.getElementById(elementId);
-    element.classList.add('bg-orange-400');
+    element.classList.add('bg-green-500');
 }
 function removeBackgroundColorById(elementId){
     const element = document.getElementById(elementId);
-    element.classList.remove('bg-orange-400');
+    element.classList.remove('bg-green-500');
 }
 
 function getTextElementValueById(elementId){
@@ -26,12 +26,18 @@ function setTextElementValueById(elementId,value){
     const element = document.getElementById(elementId);
     element.innerText = value;
 }
+function getTextElementById(elementId){
+    const element = document.getElementById(elementId);
+    const text = element.innerText;
+    return text; 
+}
 
 function getARandomAlphabet(){
     //Get or Create an Alphabet Array
     const alphabetString = 'abcdefghijklmnopqrstuvwxyz';
     const alphabets = alphabetString.split('');
     // console.log(alphabets);
+    
     //Get a random index between 0-25
     const randomNumber = Math.random()*25;
     const index = Math.round(randomNumber);
